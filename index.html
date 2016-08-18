@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<thml>
+<head>
+    <meta charset="utf-8">
+    <title>demopage</title>
+    <link href="style/style.css" rel="stylesheet">
+        <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+        <script src="js/vendors/jquery.slimscroll.min.js"></script>
+        <script type="text/javascxript" src="js/masonry.pkgd.min.js"></script>
+        <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+        <script type="text/javascript" src="slick.min.js"></script>
+        <script type="text/javascript" src="js/jquery.sticky.js"></script>
+        
+        <script>
+           $(document).ready(function() {
+            $('#main').fullpage({
+                navigation: true,
+                navigationPosition: 'center'
+            });
+        }); 
+            
+            $(function(){
+            $('.masonry').masonry({
+	        itemSelector: '.grid',
+	        isFitWidth: true,
+	        isAnimated: true
+            });
+        });
+            
+            $(function(){
+            $(window).on('load scroll', function(){
+		      if ($(window).scrollTop() > 80) {
+			$('#nav').addClass('fixed');
+		      } else {
+			$('#nav').removeClass('fixed');}
+		    });
+        });
+            
+            $(window).ready(function(){
+            $("#sticker").sticky({
+            topSpacing:0,center:true});
+        });
+        </script>
+</head>
+<body>
+    <div id="main">
+    <div class="section">
+    <div id="image">
+    <div id="header">
+        <div id="nav">
+        <div id="sticker">
+        <ul>
+            <li><a href="">TOP</a></li>
+            <li><a href="">SPONSORS</a></li>
+            <li><a href=""> ABOUT US</a></li>
+            <li><a href="">SIGN UP</a></li>
+            <li><a href="">LOG IN</a></li>
+        </ul>
+        </div>
+        </div>
+        
+    <div id="content1">
+        <h1>Fund healthcare for people around the world</h1>
+        <p>19,098 people have funded healthcare for 8,464 patients in 23 countries.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+        
+    <div class="section">
+    <div id="content2">
+        <h1>タイトル</h1>
+        <div class="masonry">
+        <div class="box">
+            <img src="">
+            <p>テキストテキストテキスト</p>
+        </div>
+        <div class="box">
+            <img src="">
+            <p>テキストテキストテキスト</p>
+        </div>
+        <div class="box">
+            <img src="">
+            <p>テキストテキストテキスト</p>
+        </div>
+        </div>
+    </div>
+    </div>
+    
+    <div class="section">
+    <div id="content3">
+        <h1>タイトル</h1>
+        <div class="masonry">
+        <div class="box2">
+            <img src="">
+            <p>テキストテキストテキスト</p>
+        </div>
+        <div class="box2">
+            <img src="">
+            <p>テキストテキストテキスト</p>
+        </div>
+        <div class="box2">
+            <img src="">
+            <p>テキストテキストテキスト</p>
+        </div>
+        </div>
+    </div>
+    </div>
+     
+    <div class="section">
+    <div id="footer">
+        <h1>フッター</h1>
+        <div class="masonry">
+        <div class="box3">
+        <p>テキストテキストテキストテキストテキストテキスト
+            テキストテキストテキスト</p>
+        </div>
+        <div class="box3">
+        <p>テキストテキストテキストテキストテキストテキスト
+            テキストテキストテキスト</p>
+        </div>
+        <div class="box3">
+        <p>テキストテキストテキストテキストテキストテキスト
+            テキストテキストテキスト</p>
+        </div>
+        <div class="box3">
+        <p>テキストテキストテキストテキストテキストテキスト
+            テキストテキストテキスト</p>
+        </div>
+        </div>
+    </div>
+    </div>  
+    </div>
+    
+</body>
+</thml>
